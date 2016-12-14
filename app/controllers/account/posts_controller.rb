@@ -3,4 +3,10 @@ class Account::PostsController < ApplicationController
   def index
     @posts = current_user.posts
   end
+  def edit
+    @posts = current_user.groups.find(params[:id])
+  end
+  def destroy
+    @posts = current_user.groups.find(params[:id])
+  end
 end
